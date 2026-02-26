@@ -1,0 +1,123 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Open Sans', sans-serif;
+  box-sizing: border-box;
+}
+
+p {
+  color: white;
+}
+
+/* NAV */
+
+.home {
+  position: relative;
+  width: 100%;
+  background-image: url(https://wallpaperaccess.com/full/4839516.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.home::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, .75);
+  z-index: 1;
+}
+
+.home > * {
+  position: relative;
+  z-index: 2;
+}
+
+.navbar {
+    width: 100%;
+    height: 18vh;
+}
+
+.nav__title {
+  color: rgb(229, 9, 20);
+  font-weight: 700;
+  letter-spacing: 1.65px;
+}
+
+.link__wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 48px;
+    height: 8vh;
+}
+
+.navbar__links{
+    width: 100%;
+    height: 12vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav__link--wrapper {
+  display: flex;
+
+}
+
+#language {
+  padding: 6px 12px;
+  margin-right: 12px;
+  border-radius: 4px;
+  background-color: transparent;
+  color: white;
+  font-weight: bolder;
+  letter-spacing: 1.05px;
+}
+
+.select {
+  color: black;
+}
+
+
+.btn {
+    padding: 2px 12px;
+    background-color: rgb(229, 9, 20);
+    font-size: 24px;
+    font-weight: 400;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    transition: all 300ms ease;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: rgb(167, 12, 12);
+}
+
+.search__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.search__title {
+  color: White;
+  padding-bottom: 12px;
+}
+
+.search__input {
+  background-color: transparent;
+  border-color: rgb(170, 168, 168);
+  padding: 8px;
+  border-radius: 4px;
+  margin-bottom: 12px;
+  border-width: 1px;
+
+}
+
+.search__input::placeholder {
+  color: white;
+  letter-spacing: 1.05px;
+}

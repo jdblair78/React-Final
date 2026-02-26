@@ -1,0 +1,25 @@
+.genres {
+    box-sizing: border-box;
+    background-color: #141414;
+    color: white;
+}
+
+.container {
+    width: 100%;
+    margin: 0px 48px;
+}
+
+.row {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: left;
+}
+
+.genre__title {
+    padding-top: 24px;
+}
+
+.genre__img {
+    padding: 12px 8px;
+}

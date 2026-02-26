@@ -1,0 +1,9 @@
+.footer {
+    box-sizing: border-box;
+    background-color: #141414;
+    color: white;
+}
+
+.container {
+    width: 100%;
+}
