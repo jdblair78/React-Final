@@ -9,10 +9,6 @@ const Nav = () => {
           <div className="link__wrapper">
             <h1 className="nav__title">MOVIEFLIX</h1>
             <div className="nav__link--wrapper">
-              <select id="language">
-                <option value="English" className="select">English</option>
-                <option value="Spanish" className="select">Español</option>
-              </select>
               <button className="btn">Sign In</button>
             </div>
           </div>
