@@ -93,7 +93,7 @@ p {
 }
 
 .btn:hover {
-    background-color: rgb(167, 12, 12);
+    background-color: rgb(102, 6, 6);
 }
 
 .search__wrapper {
@@ -114,6 +114,9 @@ p {
   border-radius: 4px;
   margin-bottom: 12px;
   border-width: 1px;
+  color: white;
+  letter-spacing: 1.10px;
+  font-size: medium;
 
 }
 

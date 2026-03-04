@@ -36,23 +36,23 @@ const Modal = ({ movie, onClose }) => {
                 <span className="gray">Genre </span>
                 {movie.Genre}
               </p>
-              <p className="Modal__para">
+              <p className="modal__para">
                 <span className="gray">Rated </span>
                 {movie.Rated}
               </p>
-              <p className="Modal__para plot">{movie.Plot}</p>
+              <p className="modal__para plot">{movie.Plot}</p>
             </div>
           </div>
           <div className="modal__details--bottom">
-            <p className="Modal__para">
+            <p className="modal__para">
               <span className="gray">Stars </span>
               {movie.Actors}
             </p>
-            <p className="Modal__para">
+            <p className="modal__para">
               <span className="gray">Awards </span>
               {movie.Awards}
             </p>
-            <p className="Modal__para">
+            <p className="modal__para">
               <span className="gray">Direct by </span>
               {movie.Director}
             </p>
