@@ -6,16 +6,16 @@ import Modal from "./Modal";
 const Genre = () => {
   const [selectedMovie, setSelectedMovie] = useState();
   const [showModal, setShowModal] = useState(false);
-  const [topPicks, setTopPicks] = useState([]);
-  const [feelGood, setFeelGood] = useState([]);
-  const [suspense, setSuspense] = useState([]);
+  const [action, setAction] = useState([]);
+  const [crime, setCrime] = useState([]);
+  const [horror, setHorror] = useState([]);
 
-  async function fetchBySearch(searchTerm, setter) {
+  async function fetchBySearch(searchTerm, searchAmount) {
     const { data } = await axios.get(
       `https://www.omdbapi.com/?s=${searchTerm}&apikey=c11d0770`,
     );
     if (data.Search) {
-      setter(data.Search.slice(0, 8));
+      searchAmount(data.Search.slice(0, 10));
     }
   }
 
@@ -29,9 +29,9 @@ const Genre = () => {
   }
 
   useEffect(() => {
-    fetchBySearch("drama", setTopPicks);
-    fetchBySearch("comedy", setFeelGood);
-    fetchBySearch("thriller", setSuspense);
+    fetchBySearch("action", setAction);
+    fetchBySearch("crime", setCrime);
+    fetchBySearch("horror", setHorror);
   }, []);
 
   return (
@@ -39,54 +39,60 @@ const Genre = () => {
       <div className="genres">
         <div className="container">
           <div className="row">
-            <h4 className="genre__title">Drama keeping you intrigued</h4>
-            <div className="top__picks">
-              {topPicks.map((movie) => (
-                <img
-                  key={movie.imdbID}
-                  src={movie.Poster}
-                  className="genre__img"
-                  alt={movie.Title}
-                  onClick={() => {
-                    fetchMoviesDetails(movie.imdbID);
-                    setShowModal(true);
-                  }}
-                  style={{ cursor: "pointer" }}
-                ></img>
-              ))}
+            <div className="genre__wrapper">
+              <h4 className="genre__title">Action Packed</h4>
+              <div className="top__picks">
+                {action.map((movie) => (
+                  <img
+                    key={movie.imdbID}
+                    src={movie.Poster}
+                    className="genre__img"
+                    alt={movie.Title}
+                    onClick={() => {
+                      fetchMoviesDetails(movie.imdbID);
+                      setShowModal(true);
+                    }}
+                    style={{ cursor: "pointer" }}
+                  ></img>
+                ))}
+              </div>
             </div>
-
-            <h4 className="genre__title">Feel Good Movies</h4>
-            <div className="top__picks">
-              {feelGood.map((movie) => (
-                <img
-                  key={movie.imdbID}
-                  src={movie.Poster}
-                  className="genre__img"
-                  alt={movie.Title}
-                  onClick={() => {
-                    fetchMoviesDetails(movie.imdbID);
-                    setShowModal(true);
-                  }}
-                  style={{ cursor: "pointer" }}
-                ></img>
-              ))}
+            <div className="genre__wrapper">
+              <h4 className="genre__title">True Crime</h4>
+              <div className="top__picks">
+                {crime.map((movie) => (
+                  <img
+                    key={movie.imdbID}
+                    src={movie.Poster}
+                    className="genre__img"
+                    alt={movie.Title}
+                    onClick={() => {
+                      fetchMoviesDetails(movie.imdbID);
+                      setShowModal(true);
+                      console.log(fetchMoviesDetails(movie.imdbID));
+                    }}
+                    style={{ cursor: "pointer" }}
+                  ></img>
+                ))}
+              </div>
             </div>
-            <h4 className="genre__title">Gripping Suspense</h4>
-            <div className="top__picks">
-              {suspense.map((movie) => (
-                <img
-                  key={movie.imdbID}
-                  src={movie.Poster}
-                  className="genre__img"
-                  alt={movie.Title}
-                  onClick={() => {
-                    fetchMoviesDetails(movie.imdbID);
-                    setShowModal(true);
-                  }}
-                  style={{ cursor: "pointer" }}
-                ></img>
-              ))}
+            <div className="genre__wrapper">
+              <h4 className="genre__title">Gripping Suspense</h4>
+              <div className="top__picks">
+                {horror.map((movie) => (
+                  <img
+                    key={movie.imdbID}
+                    src={movie.Poster}
+                    className="genre__img"
+                    alt={movie.Title}
+                    onClick={() => {
+                      fetchMoviesDetails(movie.imdbID);
+                      setShowModal(true);
+                    }}
+                    style={{ cursor: "pointer" }}
+                  ></img>
+                ))}
+              </div>
             </div>
           </div>
           {showModal && selectedMovie && (
