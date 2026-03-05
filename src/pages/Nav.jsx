@@ -1,7 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import "./nav.css";
+import axios from "axios";
 
-const Nav = () => {
+const Nav = ({ setSearchTerm }) => {
+  const [movies, setMovies] = useState([]);
+
+  async function fetchBySearch(searchTerm) {
+    const { data } = await axios.get(
+      `https://www.omdbapi.com/?s=${searchTerm}&apikey=c11d0770`,
+    );
+   
+  }
+
   return (
     <div className="home">
       <div className="navbar">
@@ -17,10 +27,16 @@ const Nav = () => {
       <div className="search__wrapper">
         <h1 className="search__title">Unlimited Movies</h1>
         <input
-          type="text"
-          className="search__input"
-          placeholder="Search Movies..."
-        ></input>
+        type="text"
+        className="search__input"
+        placeholder="Search movies..."
+        onChange={(event) => setSearchTerm(event.target.value)}
+      />
+      </div>
+      <div className="search__results">
+        {movies.map((movie) => (
+          <img className="search__img" key={movie.imdbID} src={movie.Poster} alt={movie.Title} />
+        ))}
       </div>
     </div>
   );

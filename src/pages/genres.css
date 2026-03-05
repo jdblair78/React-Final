@@ -13,7 +13,14 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: left;
+  align-items: center;
+}
+
+.search__picks {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
 .genre__wrapper {
@@ -27,7 +34,7 @@
 }
 
 .genre__img {
-  padding: 0px 4px;
+  padding: 4px 4px;
   height: 230px;
   width: 180px;
   border-radius: 8px;
