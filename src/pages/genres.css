@@ -16,14 +16,9 @@
   align-items: center;
 }
 
-.search__picks {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-}
-
 .genre__wrapper {
+    display: flex;
+    flex-direction: column;
     padding-bottom: 16px;
     width: 100%;
 }

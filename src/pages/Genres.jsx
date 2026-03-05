@@ -68,7 +68,7 @@ const Genre = ({ movies, searchTerm }) => {
 
             <div className="genre__wrapper">
               <h4 className="genre__title">Action Packed</h4>
-              <div className="top__Crime">
+              <div className="genre__picks">
                 {action.map((movie) => (
                   <img
                     className="genre__img"
@@ -86,7 +86,7 @@ const Genre = ({ movies, searchTerm }) => {
             </div>
             <div className="genre__wrapper">
               <h4 className="genre__title">True Crime</h4>
-              <div className="top__picks">
+              <div className="genre__picks">
                 {crime.map((movie) => (
                   <img
                     className="genre__img"

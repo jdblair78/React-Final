@@ -4,6 +4,51 @@
     color: white;
 }
 
-.container {
+
+.footer__title{
+    padding: 8px 0;
+    color: rgb(229, 9, 20);
+    font-weight: 700;
+    letter-spacing: 1.65px;
+}
+
+.footer__links--wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 12px 0px;
+}
+
+
+.footer__links {
     width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer__link {
+    padding-right: 32px;
+    list-style: none;
+    transition: all 300ms ease;
+}
+
+.footer__link--anchor {
+    text-decoration: none;
+    color: White;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.footer__link:hover {
+    transform: scale(1.15);
+
+}
+
+.copyright {
+    padding: 12px;
+}
+
+.red {
+    color: rgb(229, 9, 20);
 }

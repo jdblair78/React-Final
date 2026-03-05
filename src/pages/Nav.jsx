@@ -17,7 +17,7 @@ const Nav = ({ setSearchTerm }) => {
       <div className="navbar">
         <div className="navbar__links">
           <div className="link__wrapper">
-            <h1 className="nav__title">MOVIEFLIX</h1>
+            <h1 className="nav__title">FLIXSTER</h1>
             <div className="nav__link--wrapper">
               <button className="btn">Sign In</button>
             </div>
