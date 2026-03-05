@@ -17,7 +17,7 @@ const Genre = ({ movies, searchTerm }) => {
       `https://www.omdbapi.com/?s=${searchTerm}&apikey=c11d0770`,
     );
     if (data.Search) {
-      searchAmount(data.Search.slice(0, 8));
+      searchAmount(data.Search.slice(0, 9));
     }
   }
 
