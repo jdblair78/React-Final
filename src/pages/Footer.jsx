@@ -7,35 +7,20 @@ const Footer = () => {
       <div className="footer">
         <div className="container">
           <div className="row">
-              <h1 className="footer__title">FLIXSTER</h1>
-            <div class="footer__links">
-              <li class="footer__link">
-                <a href="#" class="footer__link--anchor">
-                  Home
-                </a>
-              </li>
-              <li class="footer__link">
-                <a href="#" class="footer__link--anchor">
-                  Help Center
-                </a>
-              </li>
-              <li class="footer__link">
-                <a href="#" class="footer__link--anchor">
-                  Legal
-                </a>
-              </li>
-              <li class="footer__link">
-                <a href="#" class="footer__link--anchor">
-                  Terms of Use
-                </a>
-              </li>
-              <li class="footer__link">
-                <a href="#" class="footer__link--anchor">
-                  Contact Us
-                </a>
-              </li>
+            <h1 className="footer__title">FLIXSTER</h1>
+
+            <div className="footer__links">
+              <a href="#" >
+              <li className="footer__link cursor">Home</li>
+              </a>
+              <li className="footer__link">Help Center</li>
+              <li className="footer__link">Legal</li>
+              <li className="footer__link">Terms of Use</li>
+              <li className="footer__link">Contact Us</li>
             </div>
-              <h4 class="copyright">&copy;<span class="red"> FLIXSTER</span> 2026</h4>
+            <h4 className="copyright">
+              &copy;<span className="red"> FLIXSTER</span> 2026
+            </h4>
           </div>
         </div>
       </div>

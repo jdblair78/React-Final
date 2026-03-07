@@ -18,7 +18,7 @@ useEffect(() => {
       );
 
       if (data.Search) {
-        setMovies(data.Search);
+        setMovies(data.Search.slice(0, 6));
       }
     }
 

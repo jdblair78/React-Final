@@ -94,6 +94,7 @@ p {
 
 .btn:hover {
     background-color: rgb(102, 6, 6);
+    cursor: no-drop;
 }
 
 .search__wrapper {
@@ -123,6 +124,12 @@ p {
 .search__input::placeholder {
   color: white;
   letter-spacing: 1.05px;
+}
+
+.search__results {
+   display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 

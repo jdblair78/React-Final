@@ -3,15 +3,12 @@ import "./nav.css";
 import axios from "axios";
 
 const Nav = ({ setSearchTerm }) => {
-  const [movies, setMovies] = useState([]);
+  const [movies] = useState([]);
 
-  async function fetchBySearch(searchTerm, searchAmount) {
+  async function fetchBySearch(searchTerm) {
     const { data } = await axios.get(
       `https://www.omdbapi.com/?s=${searchTerm}&apikey=c11d0770`,
     );
-    if (data.Search) {
-      searchAmount(data.Search.slice(0, 8));
-    }
    
   }
 

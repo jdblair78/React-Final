@@ -9,10 +9,19 @@
 }
 
 .row {
+  width: 100%;
+}
+
+.search__results {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-between;
+}
+
+.search__picks {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .genre__wrapper {
@@ -31,6 +40,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    
 }
 
 .genre__img {
@@ -38,9 +48,7 @@
   height: 230px;
   width: 180px;
   border-radius: 8px;
+  
 }
 
-.search__picks {
-    display: flex;
-    justify-content: space-between;
-}
+
