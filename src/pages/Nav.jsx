@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "./nav.css";
-import axios from "axios";
 
 const Nav = ({ setSearchTerm }) => {
   const [movies] = useState([]);
