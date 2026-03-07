@@ -5,13 +5,6 @@ import axios from "axios";
 const Nav = ({ setSearchTerm }) => {
   const [movies] = useState([]);
 
-  async function fetchBySearch(searchTerm) {
-    const { data } = await axios.get(
-      `https://www.omdbapi.com/?s=${searchTerm}&apikey=c11d0770`,
-    );
-   
-  }
-
   return (
     <div className="home">
       <div className="navbar">

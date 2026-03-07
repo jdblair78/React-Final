@@ -42,7 +42,7 @@ const Genre = ({ movies, searchTerm, actionPacked, trueCrime, thriller }) => {
       <div className="genres">
         <div className="container">
           <div className="row">
-            {searchTerm && movies ?.length > 0 && (
+            {searchTerm && movies?.length > 0 && (
               <div className="search__results">
                 <h2 className="genre__title">Search Results:</h2>
                 <div className="search__picks">
